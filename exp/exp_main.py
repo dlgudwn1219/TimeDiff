@@ -452,9 +452,17 @@ class Exp_Main(Exp_Basic):
         # if not os.path.exists(folder_path):
         #     os.makedirs(folder_path)
 
-        print(f"preds shape: {preds.shape} trues shape: {trues.shape}")
-
         mae, mse, rmse, mape, mspe, corr = metric(preds, trues)
+
+        print(preds.shape)
+
+        preds_univariate = preds[:, :, -1]
+        trues_univariate = trues[:, :, -1]
+
+        print(preds_univariate.shape)
+
+        mae_uni, mse_uni, rmse_uni, mape_uni, mspe_uni, corr_uni = metric(preds_univariate, trues_univariate)
+
 
         if self.args.sample_times > 1:
             print('mse|mae|crps|rmse|mape|mspe|corr')
@@ -463,12 +471,15 @@ class Exp_Main(Exp_Basic):
         else:
             print('mse|mae|rmse|mape|mspe|corr')
             print(mse, mae, rmse, mape, mspe, corr)
+        
+
         # print('mse:{}, mae:{}'.format(mse, mae))
         # print('rmse:{}, mape:{}, mspe:{}, corr:{}'.format(rmse, mape, mspe, corr))
-        f = open("result.txt", 'a')
+        f = open("./result_logs/result.txt", 'a')
         f.write(setting + "  \n")
-        f.write('mse:{}, mae:{}'.format(mse, mae))
+        f.write('mse multivariate:{}, mae multivariate:{}'.format(mse, mae))
         f.write('\n')
         f.write('\n')
+        f.write('mse univariate:{}, mae univariate:{}'.format(mse_uni, mae_uni))
         f.close()
 

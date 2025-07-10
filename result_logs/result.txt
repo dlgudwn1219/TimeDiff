@@ -1,0 +1,13 @@
+ETTh1_1440_168_DDPM_ETTh1_ftM_sl1440_ll336_pl168_dt0_TWO  
+mse multivariate:0.4601270258426666, mae multivariate:0.4640107750892639
+
+mse univariate:0.4598850607872009, mae univariate:0.4692639708518982ETTh1_1440_168_DDPM_ETTh1_ftM_sl1440_ll336_pl168_dt0_TWO  
+mse multivariate:0.4601270258426666, mae multivariate:0.4640107750892639
+
+mse univariate:0.4598850607872009, mae univariate:0.4692639708518982ETTh1_1440_168_DDPM_ETTh1_ftM_sl1440_ll336_pl168_dt0_TWO  
+mse multivariate:0.4601270258426666, mae multivariate:0.4640107750892639
+
+mse univariate:0.4598850607872009, mae univariate:0.4692639708518982ETTh1_1440_168_DDPM_ETTh1_ftM_sl1440_ll336_pl168_dt0_TWO  
+mse multivariate:0.4601270258426666, mae multivariate:0.4640107750892639
+
+mse univariate:0.07388430088758469, mae univariate:0.21558135747909546
