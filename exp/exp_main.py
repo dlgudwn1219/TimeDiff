@@ -452,6 +452,8 @@ class Exp_Main(Exp_Basic):
         # if not os.path.exists(folder_path):
         #     os.makedirs(folder_path)
 
+        print(f"preds shape: {preds.shape} trues shape: {trues.shape}")
+
         mae, mse, rmse, mape, mspe, corr = metric(preds, trues)
 
         if self.args.sample_times > 1:

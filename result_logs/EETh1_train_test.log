@@ -1,0 +1,476 @@
+Args in experiment:
+Namespace(ii=0, use_window_normalization=True, stage_mode='TWO', is_training=1, out_figures=1, vis_ar_part=0, vis_MTS_analysis=1, model='DDPM', train_epochs=100, pretrain_epochs=10, sample_times=1, beta_dist_alpha=-1, our_ddpm_clip=100, seq_len=1440, label_len=336, pred_len=168, dataset_name='ETTh1', weather_type='mintemp', features='M', target='OT', num_vars=7, checkpoints='./checkpoints/', freq='h', interval=1000, ot_ode=True, beta_max=0.3, t0=0.0001, T=1.0, model_channels=256, nfe=100, dim_LSTM=64, diff_steps=100, UNet_Type='CNN', D3PM_kernel_size=5, use_freq_enhance=0, type_sampler='dpm', parameterization='x_start', ddpm_inp_embed=256, ddpm_dim_diff_steps=256, ddpm_channels_conv=256, ddpm_channels_fusion_I=256, ddpm_layers_inp=5, ddpm_layers_I=5, ddpm_layers_II=10, cond_ddpm_num_layers=30, cond_ddpm_channels_conv=32, ablation_study_case='none', weight_pred_loss=0.0, ablation_study_F_type='Linear', ablation_study_masking_type='none', ablation_study_masking_tau=0.9, learning_rate=0.0001, embed='timeF', use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', seed=2021, num_workers=0, itr=1, batch_size=64, test_batch_size=32, use_amp=False, tag='', DATAdir='../datasets', data='ETTh1', model_id='ETTh1_1440_168', root_path='../datasets/prediction/data_autoformer/ETT-small/', data_path='ETTh1.csv', use_valset=True)
+Use GPU: cuda:0
+>>>>>>>start pretraining : ETTh1_1440_168_DDPM_ETTh1_ftM_sl1440_ll336_pl168_dt0_TWO>>>>>>>>>>>>>>>>>>>>>>>>>>
+> train-shape (8640, 7) (8640, 7)
+train 7033
+> val-shape (4320, 7) (4320, 7)
+val 2713
+> test-shape (4320, 7) (4320, 7)
+test 2713
+PreTraining Epoch: 1 cost time: 2.1085569858551025
+PreTraining Epoch: 1, Steps: 109 | Train Loss: 0.7185788 
+-------------------------
+PreTraining Epoch: 2 cost time: 1.7226622104644775
+PreTraining Epoch: 2, Steps: 109 | Train Loss: 0.4980496 
+-------------------------
+PreTraining Epoch: 3 cost time: 1.7361044883728027
+PreTraining Epoch: 3, Steps: 109 | Train Loss: 0.4499635 
+-------------------------
+PreTraining Epoch: 4 cost time: 1.6495859622955322
+PreTraining Epoch: 4, Steps: 109 | Train Loss: 0.4264218 
+-------------------------
+PreTraining Epoch: 5 cost time: 1.797515869140625
+PreTraining Epoch: 5, Steps: 109 | Train Loss: 0.4123343 
+-------------------------
+PreTraining Epoch: 6 cost time: 1.817859411239624
+PreTraining Epoch: 6, Steps: 109 | Train Loss: 0.4027451 
+-------------------------
+PreTraining Epoch: 7 cost time: 1.7766735553741455
+PreTraining Epoch: 7, Steps: 109 | Train Loss: 0.3954181 
+-------------------------
+PreTraining Epoch: 8 cost time: 1.6254746913909912
+PreTraining Epoch: 8, Steps: 109 | Train Loss: 0.3890211 
+-------------------------
+PreTraining Epoch: 9 cost time: 1.7798728942871094
+PreTraining Epoch: 9, Steps: 109 | Train Loss: 0.3847977 
+-------------------------
+PreTraining Epoch: 10 cost time: 1.7682230472564697
+PreTraining Epoch: 10, Steps: 109 | Train Loss: 0.3812022 
+-------------------------
+>>>>>>>start training : ETTh1_1440_168_DDPM_ETTh1_ftM_sl1440_ll336_pl168_dt0_TWO>>>>>>>>>>>>>>>>>>>>>>>>>>
+Successfully loading pretrained model!
+> train-shape (8640, 7) (8640, 7)
+train 7033
+> val-shape (4320, 7) (4320, 7)
+val 2713
+> test-shape (4320, 7) (4320, 7)
+test 2713
+	iters: 100, epoch: 1 | loss: 0.1858630
+	speed: 0.0383s/iter; left time: 413.1959s
+Epoch: 1 cost time: 4.1218156814575195
+Epoch: 1, Steps: 109 | Train Loss: 0.3588226 Val Loss: 0.5378811 
+-------------------------
+	iters: 100, epoch: 2 | loss: 0.1217078
+	speed: 0.0542s/iter; left time: 579.5017s
+Epoch: 2 cost time: 3.5296790599823
+Epoch: 2, Steps: 109 | Train Loss: 0.1425113 Val Loss: 0.5767511 
+	iters: 100, epoch: 3 | loss: 0.1023577
+	speed: 0.0635s/iter; left time: 671.9198s
+Epoch: 3 cost time: 4.750961065292358
+Epoch: 3, Steps: 109 | Train Loss: 0.1102320 Val Loss: 0.5379823 
+	iters: 100, epoch: 4 | loss: 0.0930336
+	speed: 0.0656s/iter; left time: 686.9757s
+Epoch: 4 cost time: 4.697317123413086
+Epoch: 4, Steps: 109 | Train Loss: 0.0972145 Val Loss: 0.5173355 
+-------------------------
+	iters: 100, epoch: 5 | loss: 0.0842809
+	speed: 0.0589s/iter; left time: 610.2967s
+Epoch: 5 cost time: 4.4166600704193115
+Epoch: 5, Steps: 109 | Train Loss: 0.0879034 Val Loss: 0.4956454 
+-------------------------
+	iters: 100, epoch: 6 | loss: 0.0758435
+	speed: 0.0748s/iter; left time: 767.4429s
+Epoch: 6 cost time: 5.082804203033447
+Epoch: 6, Steps: 109 | Train Loss: 0.0816803 Val Loss: 0.4964919 
+	iters: 100, epoch: 7 | loss: 0.0686992
+	speed: 0.0609s/iter; left time: 618.1190s
+Epoch: 7 cost time: 4.175408363342285
+Epoch: 7, Steps: 109 | Train Loss: 0.0757971 Val Loss: 0.4761563 
+-------------------------
+	iters: 100, epoch: 8 | loss: 0.0677023
+	speed: 0.0645s/iter; left time: 646.9902s
+Epoch: 8 cost time: 4.55284309387207
+Epoch: 8, Steps: 109 | Train Loss: 0.0715079 Val Loss: 0.4775205 
+	iters: 100, epoch: 9 | loss: 0.0691636
+	speed: 0.0570s/iter; left time: 565.5516s
+Epoch: 9 cost time: 4.042724370956421
+Epoch: 9, Steps: 109 | Train Loss: 0.0679797 Val Loss: 0.4803766 
+	iters: 100, epoch: 10 | loss: 0.0586681
+	speed: 0.0653s/iter; left time: 641.4011s
+Epoch: 10 cost time: 4.926729917526245
+Epoch: 10, Steps: 109 | Train Loss: 0.0650814 Val Loss: 0.4511069 
+-------------------------
+	iters: 100, epoch: 11 | loss: 0.0569213
+	speed: 0.0606s/iter; left time: 588.1307s
+Epoch: 11 cost time: 4.147343158721924
+Epoch: 11, Steps: 109 | Train Loss: 0.0613173 Val Loss: 0.4448528 
+-------------------------
+	iters: 100, epoch: 12 | loss: 0.0570284
+	speed: 0.0569s/iter; left time: 546.5497s
+Epoch: 12 cost time: 3.868056535720825
+Epoch: 12, Steps: 109 | Train Loss: 0.0585565 Val Loss: 0.4507891 
+	iters: 100, epoch: 13 | loss: 0.0569635
+	speed: 0.0579s/iter; left time: 549.8584s
+Epoch: 13 cost time: 3.926750898361206
+Epoch: 13, Steps: 109 | Train Loss: 0.0560050 Val Loss: 0.4431398 
+-------------------------
+	iters: 100, epoch: 14 | loss: 0.0508430
+	speed: 0.0551s/iter; left time: 517.4584s
+Epoch: 14 cost time: 3.818589687347412
+Epoch: 14, Steps: 109 | Train Loss: 0.0546636 Val Loss: 0.4433429 
+	iters: 100, epoch: 15 | loss: 0.0512906
+	speed: 0.0569s/iter; left time: 527.3254s
+Epoch: 15 cost time: 4.054264068603516
+Epoch: 15, Steps: 109 | Train Loss: 0.0516926 Val Loss: 0.4377180 
+-------------------------
+	iters: 100, epoch: 16 | loss: 0.0487105
+	speed: 0.0569s/iter; left time: 521.7248s
+Epoch: 16 cost time: 3.8635013103485107
+Epoch: 16, Steps: 109 | Train Loss: 0.0505229 Val Loss: 0.4280906 
+-------------------------
+	iters: 100, epoch: 17 | loss: 0.0467231
+	speed: 0.0614s/iter; left time: 555.7513s
+Epoch: 17 cost time: 4.469537734985352
+Epoch: 17, Steps: 109 | Train Loss: 0.0487203 Val Loss: 0.4333889 
+	iters: 100, epoch: 18 | loss: 0.0467259
+	speed: 0.0665s/iter; left time: 594.8517s
+Epoch: 18 cost time: 4.860148668289185
+Epoch: 18, Steps: 109 | Train Loss: 0.0471808 Val Loss: 0.4344347 
+	iters: 100, epoch: 19 | loss: 0.0456753
+	speed: 0.0573s/iter; left time: 506.2998s
+Epoch: 19 cost time: 3.9931368827819824
+Epoch: 19, Steps: 109 | Train Loss: 0.0461812 Val Loss: 0.4143888 
+-------------------------
+	iters: 100, epoch: 20 | loss: 0.0445604
+	speed: 0.0596s/iter; left time: 520.3028s
+Epoch: 20 cost time: 4.158310651779175
+Epoch: 20, Steps: 109 | Train Loss: 0.0451931 Val Loss: 0.4175990 
+	iters: 100, epoch: 21 | loss: 0.0451193
+	speed: 0.0628s/iter; left time: 541.4497s
+Epoch: 21 cost time: 4.610850095748901
+Epoch: 21, Steps: 109 | Train Loss: 0.0435756 Val Loss: 0.4211271 
+	iters: 100, epoch: 22 | loss: 0.0408049
+	speed: 0.0553s/iter; left time: 470.7852s
+Epoch: 22 cost time: 4.116406679153442
+Epoch: 22, Steps: 109 | Train Loss: 0.0426430 Val Loss: 0.4144939 
+	iters: 100, epoch: 23 | loss: 0.0400742
+	speed: 0.0536s/iter; left time: 450.4281s
+Epoch: 23 cost time: 3.4675633907318115
+Epoch: 23, Steps: 109 | Train Loss: 0.0417877 Val Loss: 0.4095058 
+-------------------------
+	iters: 100, epoch: 24 | loss: 0.0412385
+	speed: 0.0552s/iter; left time: 457.4735s
+Epoch: 24 cost time: 3.713934898376465
+Epoch: 24, Steps: 109 | Train Loss: 0.0404462 Val Loss: 0.4144390 
+	iters: 100, epoch: 25 | loss: 0.0413600
+	speed: 0.0566s/iter; left time: 463.5903s
+Epoch: 25 cost time: 3.9673168659210205
+Epoch: 25, Steps: 109 | Train Loss: 0.0397531 Val Loss: 0.4087249 
+-------------------------
+	iters: 100, epoch: 26 | loss: 0.0385101
+	speed: 0.0539s/iter; left time: 435.0262s
+Epoch: 26 cost time: 3.6139698028564453
+Epoch: 26, Steps: 109 | Train Loss: 0.0388940 Val Loss: 0.4142791 
+	iters: 100, epoch: 27 | loss: 0.0379633
+	speed: 0.0540s/iter; left time: 430.0596s
+Epoch: 27 cost time: 3.734532594680786
+Epoch: 27, Steps: 109 | Train Loss: 0.0380641 Val Loss: 0.4144390 
+	iters: 100, epoch: 28 | loss: 0.0417427
+	speed: 0.0590s/iter; left time: 463.9330s
+Epoch: 28 cost time: 4.3895580768585205
+Epoch: 28, Steps: 109 | Train Loss: 0.0377384 Val Loss: 0.4096961 
+	iters: 100, epoch: 29 | loss: 0.0377660
+	speed: 0.0561s/iter; left time: 434.8498s
+Epoch: 29 cost time: 3.785747528076172
+Epoch: 29, Steps: 109 | Train Loss: 0.0371050 Val Loss: 0.4159146 
+	iters: 100, epoch: 30 | loss: 0.0348354
+	speed: 0.0557s/iter; left time: 425.7012s
+Epoch: 30 cost time: 3.9139697551727295
+Epoch: 30, Steps: 109 | Train Loss: 0.0368072 Val Loss: 0.4116259 
+	iters: 100, epoch: 31 | loss: 0.0319665
+	speed: 0.0629s/iter; left time: 473.5905s
+Epoch: 31 cost time: 4.524979591369629
+Epoch: 31, Steps: 109 | Train Loss: 0.0355235 Val Loss: 0.4083858 
+-------------------------
+	iters: 100, epoch: 32 | loss: 0.0312689
+	speed: 0.0542s/iter; left time: 402.0908s
+Epoch: 32 cost time: 3.6159844398498535
+Epoch: 32, Steps: 109 | Train Loss: 0.0351313 Val Loss: 0.4107161 
+	iters: 100, epoch: 33 | loss: 0.0348540
+	speed: 0.0529s/iter; left time: 387.1701s
+Epoch: 33 cost time: 3.6433627605438232
+Epoch: 33, Steps: 109 | Train Loss: 0.0347515 Val Loss: 0.4089738 
+	iters: 100, epoch: 34 | loss: 0.0333181
+	speed: 0.0572s/iter; left time: 411.9714s
+Epoch: 34 cost time: 4.229401588439941
+Epoch: 34, Steps: 109 | Train Loss: 0.0343019 Val Loss: 0.4159895 
+	iters: 100, epoch: 35 | loss: 0.0362426
+	speed: 0.0583s/iter; left time: 413.2964s
+Epoch: 35 cost time: 4.111910581588745
+Epoch: 35, Steps: 109 | Train Loss: 0.0338342 Val Loss: 0.4048388 
+-------------------------
+	iters: 100, epoch: 36 | loss: 0.0327500
+	speed: 0.0622s/iter; left time: 434.2433s
+Epoch: 36 cost time: 4.423437595367432
+Epoch: 36, Steps: 109 | Train Loss: 0.0333872 Val Loss: 0.3993646 
+-------------------------
+	iters: 100, epoch: 37 | loss: 0.0306619
+	speed: 0.0594s/iter; left time: 408.6869s
+Epoch: 37 cost time: 4.227674722671509
+Epoch: 37, Steps: 109 | Train Loss: 0.0329603 Val Loss: 0.4061477 
+	iters: 100, epoch: 38 | loss: 0.0306403
+	speed: 0.0592s/iter; left time: 400.9555s
+Epoch: 38 cost time: 4.1748206615448
+Epoch: 38, Steps: 109 | Train Loss: 0.0329631 Val Loss: 0.4040762 
+	iters: 100, epoch: 39 | loss: 0.0312660
+	speed: 0.0540s/iter; left time: 359.6325s
+Epoch: 39 cost time: 3.7846245765686035
+Epoch: 39, Steps: 109 | Train Loss: 0.0323464 Val Loss: 0.4046018 
+	iters: 100, epoch: 40 | loss: 0.0311849
+	speed: 0.0602s/iter; left time: 394.2963s
+Epoch: 40 cost time: 4.440383434295654
+Epoch: 40, Steps: 109 | Train Loss: 0.0320917 Val Loss: 0.4070900 
+	iters: 100, epoch: 41 | loss: 0.0313259
+	speed: 0.0657s/iter; left time: 422.8711s
+Epoch: 41 cost time: 4.696710824966431
+Epoch: 41, Steps: 109 | Train Loss: 0.0314553 Val Loss: 0.4111377 
+	iters: 100, epoch: 42 | loss: 0.0305181
+	speed: 0.0555s/iter; left time: 351.2691s
+Epoch: 42 cost time: 3.7884743213653564
+Epoch: 42, Steps: 109 | Train Loss: 0.0313114 Val Loss: 0.4104713 
+	iters: 100, epoch: 43 | loss: 0.0309828
+	speed: 0.0602s/iter; left time: 374.4576s
+Epoch: 43 cost time: 4.226626873016357
+Epoch: 43, Steps: 109 | Train Loss: 0.0314468 Val Loss: 0.4181695 
+	iters: 100, epoch: 44 | loss: 0.0308692
+	speed: 0.0636s/iter; left time: 388.7435s
+Epoch: 44 cost time: 4.459897756576538
+Epoch: 44, Steps: 109 | Train Loss: 0.0307592 Val Loss: 0.3999281 
+	iters: 100, epoch: 45 | loss: 0.0286739
+	speed: 0.0634s/iter; left time: 380.4739s
+Epoch: 45 cost time: 4.546452045440674
+Epoch: 45, Steps: 109 | Train Loss: 0.0306806 Val Loss: 0.4086233 
+	iters: 100, epoch: 46 | loss: 0.0290269
+	speed: 0.0592s/iter; left time: 348.8135s
+Epoch: 46 cost time: 4.232758045196533
+Epoch: 46, Steps: 109 | Train Loss: 0.0301396 Val Loss: 0.4157425 
+	iters: 100, epoch: 47 | loss: 0.0285581
+	speed: 0.0505s/iter; left time: 292.1266s
+Epoch: 47 cost time: 3.441138982772827
+Epoch: 47, Steps: 109 | Train Loss: 0.0304632 Val Loss: 0.4005911 
+	iters: 100, epoch: 48 | loss: 0.0291081
+	speed: 0.0520s/iter; left time: 295.3680s
+Epoch: 48 cost time: 3.4394919872283936
+Epoch: 48, Steps: 109 | Train Loss: 0.0298594 Val Loss: 0.4062454 
+	iters: 100, epoch: 49 | loss: 0.0309657
+	speed: 0.0506s/iter; left time: 281.6717s
+Epoch: 49 cost time: 3.4367668628692627
+Epoch: 49, Steps: 109 | Train Loss: 0.0296394 Val Loss: 0.4023553 
+	iters: 100, epoch: 50 | loss: 0.0282513
+	speed: 0.0642s/iter; left time: 350.7669s
+Epoch: 50 cost time: 5.123352289199829
+Epoch: 50, Steps: 109 | Train Loss: 0.0292747 Val Loss: 0.4033592 
+	iters: 100, epoch: 51 | loss: 0.0281334
+	speed: 0.0584s/iter; left time: 312.2648s
+Epoch: 51 cost time: 4.04251503944397
+Epoch: 51, Steps: 109 | Train Loss: 0.0289437 Val Loss: 0.4052854 
+	iters: 100, epoch: 52 | loss: 0.0281970
+	speed: 0.0590s/iter; left time: 309.2885s
+Epoch: 52 cost time: 3.993734121322632
+Epoch: 52, Steps: 109 | Train Loss: 0.0288254 Val Loss: 0.4049809 
+	iters: 100, epoch: 53 | loss: 0.0289490
+	speed: 0.0545s/iter; left time: 279.8412s
+Epoch: 53 cost time: 3.6884925365448
+Epoch: 53, Steps: 109 | Train Loss: 0.0290283 Val Loss: 0.4055331 
+	iters: 100, epoch: 54 | loss: 0.0300925
+	speed: 0.0566s/iter; left time: 284.3582s
+Epoch: 54 cost time: 3.9342947006225586
+Epoch: 54, Steps: 109 | Train Loss: 0.0283796 Val Loss: 0.4106257 
+	iters: 100, epoch: 55 | loss: 0.0272947
+	speed: 0.0532s/iter; left time: 261.2869s
+Epoch: 55 cost time: 3.5996484756469727
+Epoch: 55, Steps: 109 | Train Loss: 0.0281244 Val Loss: 0.4089439 
+	iters: 100, epoch: 56 | loss: 0.0292965
+	speed: 0.0632s/iter; left time: 303.5490s
+Epoch: 56 cost time: 4.725582599639893
+Epoch: 56, Steps: 109 | Train Loss: 0.0284330 Val Loss: 0.4062860 
+	iters: 100, epoch: 57 | loss: 0.0265910
+	speed: 0.0561s/iter; left time: 263.5936s
+Epoch: 57 cost time: 3.9395461082458496
+Epoch: 57, Steps: 109 | Train Loss: 0.0280290 Val Loss: 0.4101125 
+	iters: 100, epoch: 58 | loss: 0.0267903
+	speed: 0.0601s/iter; left time: 275.6497s
+Epoch: 58 cost time: 4.402028799057007
+Epoch: 58, Steps: 109 | Train Loss: 0.0281087 Val Loss: 0.4110230 
+	iters: 100, epoch: 59 | loss: 0.0285512
+	speed: 0.0568s/iter; left time: 254.4079s
+Epoch: 59 cost time: 4.120800256729126
+Epoch: 59, Steps: 109 | Train Loss: 0.0279277 Val Loss: 0.4053972 
+	iters: 100, epoch: 60 | loss: 0.0283479
+	speed: 0.0628s/iter; left time: 274.2906s
+Epoch: 60 cost time: 4.691220045089722
+Epoch: 60, Steps: 109 | Train Loss: 0.0276890 Val Loss: 0.4055799 
+	iters: 100, epoch: 61 | loss: 0.0261320
+	speed: 0.0628s/iter; left time: 267.5632s
+Epoch: 61 cost time: 4.378699779510498
+Epoch: 61, Steps: 109 | Train Loss: 0.0272472 Val Loss: 0.4125726 
+	iters: 100, epoch: 62 | loss: 0.0264367
+	speed: 0.0672s/iter; left time: 279.1797s
+Epoch: 62 cost time: 5.210344314575195
+Epoch: 62, Steps: 109 | Train Loss: 0.0274449 Val Loss: 0.4010256 
+	iters: 100, epoch: 63 | loss: 0.0285943
+	speed: 0.0714s/iter; left time: 288.6636s
+Epoch: 63 cost time: 5.182796478271484
+Epoch: 63, Steps: 109 | Train Loss: 0.0270849 Val Loss: 0.4081105 
+	iters: 100, epoch: 64 | loss: 0.0254642
+	speed: 0.0603s/iter; left time: 237.2788s
+Epoch: 64 cost time: 4.386101007461548
+Epoch: 64, Steps: 109 | Train Loss: 0.0268692 Val Loss: 0.4096499 
+	iters: 100, epoch: 65 | loss: 0.0267921
+	speed: 0.0720s/iter; left time: 275.2696s
+Epoch: 65 cost time: 5.704569101333618
+Epoch: 65, Steps: 109 | Train Loss: 0.0268553 Val Loss: 0.4072670 
+	iters: 100, epoch: 66 | loss: 0.0250398
+	speed: 0.0611s/iter; left time: 227.1124s
+Epoch: 66 cost time: 3.9826252460479736
+Epoch: 66, Steps: 109 | Train Loss: 0.0267628 Val Loss: 0.4095676 
+	iters: 100, epoch: 67 | loss: 0.0257428
+	speed: 0.0551s/iter; left time: 198.7421s
+Epoch: 67 cost time: 3.795881986618042
+Epoch: 67, Steps: 109 | Train Loss: 0.0265391 Val Loss: 0.4051067 
+	iters: 100, epoch: 68 | loss: 0.0269154
+	speed: 0.0600s/iter; left time: 209.9587s
+Epoch: 68 cost time: 4.392246961593628
+Epoch: 68, Steps: 109 | Train Loss: 0.0265776 Val Loss: 0.4069071 
+	iters: 100, epoch: 69 | loss: 0.0254306
+	speed: 0.0602s/iter; left time: 203.8643s
+Epoch: 69 cost time: 4.237860202789307
+Epoch: 69, Steps: 109 | Train Loss: 0.0265335 Val Loss: 0.4026001 
+	iters: 100, epoch: 70 | loss: 0.0249830
+	speed: 0.0594s/iter; left time: 194.7284s
+Epoch: 70 cost time: 4.1839563846588135
+Epoch: 70, Steps: 109 | Train Loss: 0.0265216 Val Loss: 0.4074211 
+	iters: 100, epoch: 71 | loss: 0.0252944
+	speed: 0.0525s/iter; left time: 166.5260s
+Epoch: 71 cost time: 3.59900164604187
+Epoch: 71, Steps: 109 | Train Loss: 0.0265129 Val Loss: 0.4079473 
+	iters: 100, epoch: 72 | loss: 0.0264405
+	speed: 0.0607s/iter; left time: 185.9307s
+Epoch: 72 cost time: 4.383097887039185
+Epoch: 72, Steps: 109 | Train Loss: 0.0262467 Val Loss: 0.4095064 
+	iters: 100, epoch: 73 | loss: 0.0267537
+	speed: 0.0572s/iter; left time: 168.7895s
+Epoch: 73 cost time: 4.031633138656616
+Epoch: 73, Steps: 109 | Train Loss: 0.0263232 Val Loss: 0.4117950 
+	iters: 100, epoch: 74 | loss: 0.0251202
+	speed: 0.0502s/iter; left time: 142.6607s
+Epoch: 74 cost time: 3.38919997215271
+Epoch: 74, Steps: 109 | Train Loss: 0.0258421 Val Loss: 0.4059746 
+	iters: 100, epoch: 75 | loss: 0.0245918
+	speed: 0.0549s/iter; left time: 150.2451s
+Epoch: 75 cost time: 3.7063591480255127
+Epoch: 75, Steps: 109 | Train Loss: 0.0260924 Val Loss: 0.4063473 
+	iters: 100, epoch: 76 | loss: 0.0276498
+	speed: 0.0589s/iter; left time: 154.7852s
+Epoch: 76 cost time: 4.12294340133667
+Epoch: 76, Steps: 109 | Train Loss: 0.0261744 Val Loss: 0.4052918 
+	iters: 100, epoch: 77 | loss: 0.0244196
+	speed: 0.0554s/iter; left time: 139.4409s
+Epoch: 77 cost time: 4.074333190917969
+Epoch: 77, Steps: 109 | Train Loss: 0.0259914 Val Loss: 0.4039675 
+	iters: 100, epoch: 78 | loss: 0.0259726
+	speed: 0.0668s/iter; left time: 160.9515s
+Epoch: 78 cost time: 4.859647750854492
+Epoch: 78, Steps: 109 | Train Loss: 0.0257162 Val Loss: 0.4101930 
+	iters: 100, epoch: 79 | loss: 0.0266050
+	speed: 0.0637s/iter; left time: 146.3999s
+Epoch: 79 cost time: 4.634004592895508
+Epoch: 79, Steps: 109 | Train Loss: 0.0258661 Val Loss: 0.4044905 
+	iters: 100, epoch: 80 | loss: 0.0275856
+	speed: 0.0567s/iter; left time: 124.1200s
+Epoch: 80 cost time: 4.261752605438232
+Epoch: 80, Steps: 109 | Train Loss: 0.0255011 Val Loss: 0.4124034 
+	iters: 100, epoch: 81 | loss: 0.0258833
+	speed: 0.0692s/iter; left time: 144.0136s
+Epoch: 81 cost time: 4.86214804649353
+Epoch: 81, Steps: 109 | Train Loss: 0.0257938 Val Loss: 0.4058867 
+	iters: 100, epoch: 82 | loss: 0.0269056
+	speed: 0.0584s/iter; left time: 115.2591s
+Epoch: 82 cost time: 4.175445318222046
+Epoch: 82, Steps: 109 | Train Loss: 0.0256027 Val Loss: 0.4054385 
+	iters: 100, epoch: 83 | loss: 0.0244224
+	speed: 0.0572s/iter; left time: 106.4733s
+Epoch: 83 cost time: 4.133313417434692
+Epoch: 83, Steps: 109 | Train Loss: 0.0255477 Val Loss: 0.4120121 
+	iters: 100, epoch: 84 | loss: 0.0250836
+	speed: 0.0691s/iter; left time: 121.1928s
+Epoch: 84 cost time: 5.294172763824463
+Epoch: 84, Steps: 109 | Train Loss: 0.0254838 Val Loss: 0.4104269 
+	iters: 100, epoch: 85 | loss: 0.0272556
+	speed: 0.0628s/iter; left time: 103.3368s
+Epoch: 85 cost time: 4.5910844802856445
+Epoch: 85, Steps: 109 | Train Loss: 0.0254434 Val Loss: 0.4117042 
+	iters: 100, epoch: 86 | loss: 0.0237381
+	speed: 0.0720s/iter; left time: 110.6634s
+Epoch: 86 cost time: 5.848848104476929
+Epoch: 86, Steps: 109 | Train Loss: 0.0253369 Val Loss: 0.4083154 
+	iters: 100, epoch: 87 | loss: 0.0252490
+	speed: 0.0584s/iter; left time: 83.2965s
+Epoch: 87 cost time: 3.743051290512085
+Epoch: 87, Steps: 109 | Train Loss: 0.0254070 Val Loss: 0.4123754 
+	iters: 100, epoch: 88 | loss: 0.0257258
+	speed: 0.0547s/iter; left time: 72.0505s
+Epoch: 88 cost time: 3.9168665409088135
+Epoch: 88, Steps: 109 | Train Loss: 0.0254670 Val Loss: 0.4107514 
+	iters: 100, epoch: 89 | loss: 0.0274452
+	speed: 0.0633s/iter; left time: 76.5585s
+Epoch: 89 cost time: 4.449324131011963
+Epoch: 89, Steps: 109 | Train Loss: 0.0251948 Val Loss: 0.4070123 
+	iters: 100, epoch: 90 | loss: 0.0236699
+	speed: 0.0534s/iter; left time: 58.7141s
+Epoch: 90 cost time: 3.6870932579040527
+Epoch: 90, Steps: 109 | Train Loss: 0.0250056 Val Loss: 0.4137980 
+	iters: 100, epoch: 91 | loss: 0.0251646
+	speed: 0.0556s/iter; left time: 55.0943s
+Epoch: 91 cost time: 3.87636399269104
+Epoch: 91, Steps: 109 | Train Loss: 0.0252160 Val Loss: 0.4156109 
+	iters: 100, epoch: 92 | loss: 0.0242746
+	speed: 0.0517s/iter; left time: 45.5658s
+Epoch: 92 cost time: 3.557767391204834
+Epoch: 92, Steps: 109 | Train Loss: 0.0252539 Val Loss: 0.4064271 
+	iters: 100, epoch: 93 | loss: 0.0239166
+	speed: 0.0522s/iter; left time: 40.3224s
+Epoch: 93 cost time: 3.5108304023742676
+Epoch: 93, Steps: 109 | Train Loss: 0.0252815 Val Loss: 0.4100955 
+	iters: 100, epoch: 94 | loss: 0.0275097
+	speed: 0.0516s/iter; left time: 34.2613s
+Epoch: 94 cost time: 3.3694679737091064
+Epoch: 94, Steps: 109 | Train Loss: 0.0250950 Val Loss: 0.4022605 
+	iters: 100, epoch: 95 | loss: 0.0247813
+	speed: 0.0538s/iter; left time: 29.8366s
+Epoch: 95 cost time: 3.68570876121521
+Epoch: 95, Steps: 109 | Train Loss: 0.0253994 Val Loss: 0.4066211 
+	iters: 100, epoch: 96 | loss: 0.0246383
+	speed: 0.0554s/iter; left time: 24.7271s
+Epoch: 96 cost time: 3.6618661880493164
+Epoch: 96, Steps: 109 | Train Loss: 0.0251016 Val Loss: 0.4153253 
+	iters: 100, epoch: 97 | loss: 0.0258608
+	speed: 0.0544s/iter; left time: 18.3327s
+Epoch: 97 cost time: 3.807656764984131
+Epoch: 97, Steps: 109 | Train Loss: 0.0253065 Val Loss: 0.4048010 
+	iters: 100, epoch: 98 | loss: 0.0255469
+	speed: 0.0588s/iter; left time: 13.3973s
+Epoch: 98 cost time: 4.133041620254517
+Epoch: 98, Steps: 109 | Train Loss: 0.0251658 Val Loss: 0.4031745 
+	iters: 100, epoch: 99 | loss: 0.0246594
+	speed: 0.0651s/iter; left time: 7.7443s
+Epoch: 99 cost time: 4.822566747665405
+Epoch: 99, Steps: 109 | Train Loss: 0.0253710 Val Loss: 0.4076394 
+	iters: 100, epoch: 100 | loss: 0.0248060
+	speed: 0.0617s/iter; left time: 0.6168s
+Epoch: 100 cost time: 4.520596742630005
+Epoch: 100, Steps: 109 | Train Loss: 0.0251640 Val Loss: 0.4114534 
+>>>>>>>testing : ETTh1_1440_168_DDPM_ETTh1_ftM_sl1440_ll336_pl168_dt0_TWO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+> test-shape (4320, 7) (4320, 7)
+test 2713
+Successfully loading trained model!
+Elapsed time: 7.06 ms
+Elapsed time: 7.06 ms
+Elapsed time: 7.22 ms
+Elapsed time: 8.83 ms
+Elapsed time: 7.42 ms
+id_worst 2
+top5 [3 1 4 0 2]
+mse|mae|rmse|mape|mspe|corr
+0.40709808 0.42011136 0.6380424 9.455365 35187.723 25.630787

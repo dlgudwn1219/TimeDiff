@@ -1,0 +1,16 @@
+Args in experiment:
+Namespace(ii=0, use_window_normalization=True, stage_mode='TWO', is_training=0, out_figures=1, vis_ar_part=0, vis_MTS_analysis=1, model='DDPM', train_epochs=100, pretrain_epochs=10, sample_times=1, beta_dist_alpha=-1, our_ddpm_clip=100, seq_len=1440, label_len=336, pred_len=168, dataset_name='ETTh1', weather_type='mintemp', features='M', target='OT', num_vars=7, checkpoints='./checkpoints/', freq='h', interval=1000, ot_ode=True, beta_max=0.3, t0=0.0001, T=1.0, model_channels=256, nfe=100, dim_LSTM=64, diff_steps=100, UNet_Type='CNN', D3PM_kernel_size=5, use_freq_enhance=0, type_sampler='dpm', parameterization='x_start', ddpm_inp_embed=256, ddpm_dim_diff_steps=256, ddpm_channels_conv=256, ddpm_channels_fusion_I=256, ddpm_layers_inp=5, ddpm_layers_I=5, ddpm_layers_II=10, cond_ddpm_num_layers=30, cond_ddpm_channels_conv=32, ablation_study_case='none', weight_pred_loss=0.0, ablation_study_F_type='Linear', ablation_study_masking_type='none', ablation_study_masking_tau=0.9, learning_rate=0.0001, embed='timeF', use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', seed=2021, num_workers=0, itr=1, batch_size=64, test_batch_size=32, use_amp=False, tag='', DATAdir='../datasets', data='ETTh1', model_id='ETTh1_1440_168', root_path='../datasets/prediction/data_autoformer/ETT-small/', data_path='ETTh1.csv', use_valset=True)
+Use GPU: cuda:0
+>>>>>>>testing : ETTh1_1440_168_DDPM_ETTh1_ftM_sl1440_ll336_pl168_dt0_TWO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+> test-shape (4320, 7) (4320, 7)
+test 2713
+Successfully loading trained model!
+Elapsed time: 20.65 ms
+Elapsed time: 7.08 ms
+Elapsed time: 7.14 ms
+Elapsed time: 7.16 ms
+Elapsed time: 7.07 ms
+id_worst 2
+top5 [3 1 4 0 2]
+mse|mae|rmse|mape|mspe|corr
+0.40710306 0.42008185 0.63804626 9.46029 35196.082 25.629658

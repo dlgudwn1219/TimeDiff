@@ -1,5 +1,5 @@
 
-from data_provider.data_loader_depts import Dataset_Caiso_M, Dataset_Production_M, Dataset_Caiso, Dataset_Production, Dataset_Synthetic, Dataset_system_KS
+from data_provider.data_loader_depts import Dataset_Caiso_M, Dataset_Production_M, Dataset_Caiso, Dataset_Production, Dataset_Synthetic #, Dataset_system_KS
 from data_provider.data_loader import Dataset_ETT_hour, Dataset_ETT_minute, Dataset_Custom, Dataset_Custom_S, Dataset_wind, Dataset_Monash
 from torch.utils.data import DataLoader
 
@@ -14,7 +14,7 @@ data_dict = {
     'caiso': Dataset_Caiso,
     'production': Dataset_Production, 
     'synthetic': Dataset_Synthetic, 
-    'system_KS': Dataset_system_KS,
+    # 'system_KS': Dataset_system_KS,
     'caiso_m': Dataset_Caiso_M, 
     'production_m': Dataset_Production_M, 
 }

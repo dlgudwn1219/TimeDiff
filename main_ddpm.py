@@ -143,7 +143,7 @@ if args.use_gpu:
     else:
         torch.cuda.set_device(args.gpu)
 
-args.DATAdir = "../datasets"
+args.DATAdir = "./datasets"
 args.data = "custom"
 if args.dataset_name == "ECL":
     args.model_id = "{}_{}_{}".format(args.dataset_name, args.seq_len, args.pred_len)
